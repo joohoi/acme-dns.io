@@ -36,11 +36,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content>h1, h2, h3 {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    line-height: 1.3em;
-    margin: 2em 0 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.3em;
+  margin: 2em 0 1em;
 }
 
 .shady {
@@ -61,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 0;
     font-weight: bold;
     font-size: 100%;
+    color: black;
 }
 
 .pure-form input[type] {
