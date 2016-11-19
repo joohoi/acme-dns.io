@@ -1,0 +1,25 @@
+html, body {
+  width: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oxygen', sans-serif;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.content {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.shady {
+  background-color: rgba(0,0,0,0.05);
+}
+
