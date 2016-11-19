@@ -29,7 +29,7 @@ footer {
   padding: 1em;
 }
 
-.content>h1 {
+.content>h1, h2 {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -41,3 +41,26 @@ footer {
   background-color: rgba(0,0,0,0.05);
 }
 
+// forms
+
+.l-box {
+    padding: 1em 1em 0 0;
+}
+
+.l-box-lrg {
+    padding: 2em 2em 0 0;
+}
+
+.pure-form label {
+    margin: 1em 0 0;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.pure-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 1em;
+}
