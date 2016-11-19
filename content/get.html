@@ -6,3 +6,70 @@ title = "ACME-DNS.io - Get started"
 +++
 
 <h1>Get started</h1>
+<div class="row">
+  <h2>Step 1</h2>
+  <p>First, you will need your user id, api key and unique subdomain to point that CNAME to. Click the button below to get them.</p> 
+  <button>Register</button>
+  <div class="show_after_button_click">
+    <div class="left_side_of_half_grid">
+      <form class="pure-form pure-form-stacked">
+        <fieldset>
+
+          <label for="fullDomain">Full Domain</label>
+          <input id="fullDomain" type="text" placeholder="...">
+
+          <label for="subDomain">Sub Domain</label>
+          <input id="subDomain" type="text" placeholder="...">
+
+          <label for="username">Username</label>
+          <input id="username" type="text" placeholder="...">
+
+          <label for="password">Password</label>
+          <input id="password" type="text" placeholder="...">
+
+        </fieldset>
+      </form>
+    </div>
+    <div class="right_side_of_half_grid">
+      <h4>Values explained</h4>
+      <ul>
+        <li><strong>Fulldomain</strong> - This is your ACME-DNS subdomain, that you should point your CNAME to.</li>
+        <li><strong>Subdomain</strong> - This is the identifying part of the ACME-DNS subdomain, use this in your TXT update POST request. (Step 3)</li>
+        <li><strong>Username</strong> - This is your username for the unique subdomain created. This goes in X-Api-User - HTTP header in the update POST request. (Step 3</li>
+        <li><strong>Password</strong> - This is your API key. This goes in X-Api-Key - HTTP header in the update POST request. (Step 3)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Step 2</h2>
+  <p>Next you will need to create a CNAME record in your DNS zone for the magic subdomain (_acme-challenge.) for your domain.</p>
+  <p>If you are planning to use ACME-DNS to proxy DNS authentication for subdomains <i>sub1.some.domain.tld</i> and <i>domain.tld</i> you will need to add two CNAME records:</p>
+  <ul class="no_balls_lol">
+    <li>_acme-challenge.sub1.some.domain.tld. CNAME <span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_unique_subdomain&gt;</span>.auth.acme-dns.io.</li>
+    <li>_acme-challenge.domain.tld CNAME <span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_unique_subdomain&gt;.auth.acme-dns.io</li>
+  </ul>
+</div> 
+
+<div class="row">
+  <h2>Step 3</h2>
+  <p>Put it to use! When attempting to solve ACME challenge, you can push the token to ACME-DNS, and if the CNAME is correct, the CA will follow it and ask for the token from ACME-DNS subdomain.</p>
+  <p>You can automate it for many ACME clients out there, some examples below.</p>
+  <!-- Here will be tabbed examples later on -->
+  <code>
+    curl -X POST https://auth.acme-dns.io/update \
+    -H "X-Api-User: <span class="replace_with_username_if_step1_button_clicked">&lt;your_username&gt;</span>" \
+    -H "X-Api-Key: <span class="replace_with_password_if_step1_button_clicked">&lt;your_password&gt;</span>" \
+    --data '{"subdomain": "<span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_subdomain&gt;</span>", "txt": "________43_character_url_safe_token________"}'
+  </code>
+  <p>Here's what it would look like in an automated script launched by ACME client:</p>
+  <code>
+    curl -X POST https://auth.acme-dns.io/update \
+    -H "X-Api-User: <span class="replace_with_username_if_step1_button_clicked">&lt;your_username&gt;</span>" \
+    -H "X-Api-Key: <span class="replace_with_password_if_step1_button_clicked">&lt;your_password&gt;</span>" \
+    --data '{"subdomain": "<span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_subdomain&gt;</span>", "txt": "'"$TOKEN_PROVIDED_BY_ACME_CLIENT"'"}'
+  </code>
+</div>
+
+
