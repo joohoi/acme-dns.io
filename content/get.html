@@ -57,19 +57,19 @@ title = "ACME-DNS.io - Get started"
   <p>Put it to use! When attempting to solve ACME challenge, you can push the token to ACME-DNS, and if the CNAME is correct, the CA will follow it and ask for the token from ACME-DNS subdomain.</p>
   <p>You can automate it for many ACME clients out there, some examples below.</p>
   <!-- Here will be tabbed examples later on -->
-  <code>
+  <code><pre>
     curl -X POST https://auth.acme-dns.io/update \
     -H "X-Api-User: <span class="replace_with_username_if_step1_button_clicked">&lt;your_username&gt;</span>" \
     -H "X-Api-Key: <span class="replace_with_password_if_step1_button_clicked">&lt;your_password&gt;</span>" \
     --data '{"subdomain": "<span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_subdomain&gt;</span>", "txt": "________43_character_url_safe_token________"}'
-  </code>
+    </pre></code>
   <p>Here's what it would look like in an automated script launched by ACME client:</p>
-  <code>
+  <code><pre>
     curl -X POST https://auth.acme-dns.io/update \
     -H "X-Api-User: <span class="replace_with_username_if_step1_button_clicked">&lt;your_username&gt;</span>" \
     -H "X-Api-Key: <span class="replace_with_password_if_step1_button_clicked">&lt;your_password&gt;</span>" \
     --data '{"subdomain": "<span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_subdomain&gt;</span>", "txt": "'"$TOKEN_PROVIDED_BY_ACME_CLIENT"'"}'
-  </code>
+    </pre></code>
 </div>
 
 
