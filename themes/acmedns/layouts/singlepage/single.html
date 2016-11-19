@@ -3,11 +3,11 @@
   {{ partial "head.html" . }}
 
   <body>
+    <section>
       <div class="content">
-          <section>
-            {{ .Content }}
-          </section>
-    </div>
+        {{ .Content }}
+      </div>
+    </section>
     {{ partial "footer.html" . }}
   </body>
 </html>
