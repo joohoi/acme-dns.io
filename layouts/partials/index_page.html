@@ -1,0 +1,20 @@
+<h1>ACME-DNS.io</h1>
+
+<p>Making the use of the ACME DNS authentication more secure and enabling its automation regardless of the DNS server software / service used.</p>
+
+<!-- These in 1/2 grid -->
+<p><h2>Security</h2>Providing a limited API key, that only provides access to change a single TXT record; the magic name used by ACME DNS challenge: _acme-challenge.yourdomain.tld</p>
+<p><h2>Accessibility</h2>Enabling you to use ACME DNS challenge even if your current DNS server software or service doesn't provide and automatable API for updating it.</p>
+<!-- End of 1/2 grid -->
+
+<!-- Title, then full width box under -->
+<h2>How it works?</h2>
+<p>ACME-DNS creates a limited DNS server that serves TXT records used to carry ACME challenge tokens when using the DNS challenge.</p>
+<p>Get an API key and a unique subdomain from ACME-DNS service. Add a CNAME record to your zone for the magic subdomain of the domain you want to automate DNS challenge for (eg. _acme-challenge.yourdomain.tld) pointing to the unique ACME-DNS subdomain you have. After this you are able to use your ACME-DNS API keys for the challenge automation.</p>
+<!-- End full width box -->
+
+<!-- Title, then 1/2 grid -->
+<h2>Self-hosted or as a service?</h2>
+<p><h2>Self-hosted</h2>You are encouraged to run acme-dns as a self-hosted service. Go get the code from <a href="https://github.com/joohoi/acme-dns">Github</a>. Acme-dns is written in go, and runs on wide variety of operating systems.</p>
+<p><h2>As a service</h2>We are hosting the service, and it's free. While we aren't collecting any unnecessary information, please be aware that by using the service, you are basically authorizing us to act on your behalf in solving the challenge.<a href="/get">Get started</a></p>
+<!-- End of 1/2 grid -->

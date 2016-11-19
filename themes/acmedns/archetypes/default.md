@@ -1,3 +1,3 @@
 +++
-acmeregister = false
+type = "singlepage"
 +++
