@@ -1,4 +1,4 @@
 baseurl = "https://acme-dns.io/"
 title = "ACME-DNS.io"
 languageCode = "en-us"
-theme = "beautifulhugo"
+theme = "acmedns"
