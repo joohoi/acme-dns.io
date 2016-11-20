@@ -11,7 +11,7 @@ html {
 
 body {
     margin-bottom: 100px; /* bottom = footer height */
-    background-color: rgba(0,0,0,0.03);
+    background-color: rgba(0,0,0,0.02);
     color: #565c5d;
 }
 
@@ -33,6 +33,12 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+.featured {
+  background-color: rgba(0,0,0,0.03);
+  border-top: solid 8px rgba(0,0,0,0.1);
+  border-bottom: solid 2px white;
+}
+
 .white {
   color: white !important;
 }
@@ -43,13 +49,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   border-radius: 6px;
   text-align: center;
-  margin: 0em -25px 1em !important;
+  margin: 1.8em -25px 0.2em !important;
 }
 
 p.lead {
   font-size: 1.6em;
   text-align: center;
-  margin-top: 4em;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.align-right {
+  text-align: justify;
 }
 
 .content {
