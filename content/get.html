@@ -8,11 +8,11 @@ title = "ACME-DNS.io - Get started"
 <h1>Get started</h1>
 <div class="row">
   <h2>Step 1</h2>
-  <p>First, you will need your user id, api key and unique subdomain to point that CNAME to. Click the button below to get them.</p> 
-  <button>Register</button>
+  <p>First, you will need your user id, api key and unique subdomain to point that CNAME to. Click the button below to get them.</p>
+  <button id="getStarted">Register</button>
   <div class="show_after_button_click">
     <div class="left_side_of_half_grid">
-      <form class="pure-form pure-form-stacked">
+      <form class="pure-form pure-form-stacked" id="acmeForm">
         <fieldset>
 
           <label for="fullDomain">Full Domain</label>
@@ -50,7 +50,7 @@ title = "ACME-DNS.io - Get started"
     <li>_acme-challenge.sub1.some.domain.tld. CNAME <span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_unique_subdomain&gt;</span>.auth.acme-dns.io.</li>
     <li>_acme-challenge.domain.tld CNAME <span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_unique_subdomain&gt;.auth.acme-dns.io</li>
   </ul>
-</div> 
+</div>
 
 <div class="row">
   <h2>Step 3</h2>

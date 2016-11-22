@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
   background-color: white;
+  margin-bottom: 2em;
 
 }
 
@@ -55,20 +56,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lead > .pure-button {
-  background-color: black;
+  background-color: #35a4da;
+  padding: 1em 3em;
   color: white;
   transition: all 0.18s ease-in;
 }
 
 .lead > .pure-button:hover {
-  background-color: silver;
+  background-color: #2287b9;
   color: white;
 }
 
 .title {
-  font-size: 4em;
-  background-color: white;
-  border: solid 6px black;
+  font-size: 5em;
+  background-color: transparent;
+  border: solid 6px #35a4da;
   padding: 0.6em;
   border-radius: 6px;
   text-align: center;
@@ -87,7 +89,7 @@ p.lead {
 }
 
 .content-container .content, .hero .content {
-  padding: 0em 3.5em;
+  padding: 0em 3.5em 3.5em;
 }
 
 .content {
