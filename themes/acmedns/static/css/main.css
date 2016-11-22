@@ -1,26 +1,26 @@
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-    margin-bottom: 100px; /* bottom = footer height */
-    background-color: white;
-    color: #565c5d;
+  margin-bottom: 100px; /* bottom = footer height */
+  background-color: white;
+  color: #565c5d;
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,9 +34,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .featured {
-  //background-color: rgba(0,0,0,0.03);
-  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(0,0,0,0.03));
-  border-top: solid 1px rgba(0,0,0,0.2);
+    background: black;
+    border-top: solid 1px rgba(0,0,0,0.01);
+    border-bottom: solid 1px rgba(0,0,0,0.01);
+}
+
+.featured h3 {
+  font-size: 2.6em;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.featured p {
+  color: #cecece;
 }
 
 .white {
@@ -58,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4em;
   background-color: white;
   border: solid 6px black;
-  padding: 0.4em;
+  padding: 0.6em;
   border-radius: 6px;
   text-align: center;
   margin: 1.8em -25px 0.2em !important;
@@ -75,10 +86,13 @@ p.lead {
   text-align: justify;
 }
 
+.content-container .content, .hero .content {
+  padding: 0em 3.5em;
+}
+
 .content {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2em;
   line-height: 1.7em;
   font-size: 16px;
 }
@@ -91,7 +105,6 @@ footer > .content {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  line-height: 1.3em;
   margin: 2em 0 1em;
 }
 
@@ -106,7 +119,11 @@ footer > .content {
 }
 
 .l-box-lrg {
-    padding: 0em 1.6em 0 0;
+  padding: 0em 3.5em 3.5em 3.5em
+}
+
+.featured .l-box-lrg {
+ padding: 3.5em;
 }
 
 .pure-form label {
