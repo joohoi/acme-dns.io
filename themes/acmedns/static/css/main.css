@@ -11,7 +11,7 @@ html {
 
 body {
     margin-bottom: 100px; /* bottom = footer height */
-    background-color: rgba(0,0,0,0.02);
+    background-color: white;
     color: #565c5d;
 }
 
@@ -24,7 +24,7 @@ footer {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: black
+  color: black;
   font-family: 'Oxygen', sans-serif;
 }
 
@@ -34,9 +34,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .featured {
-  background-color: rgba(0,0,0,0.03);
-  border-top: solid 8px rgba(0,0,0,0.1);
-  border-bottom: solid 2px white;
+  //background-color: rgba(0,0,0,0.03);
+  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(0,0,0,0.03));
+  border-top: solid 1px rgba(0,0,0,0.2);
 }
 
 .white {
@@ -45,15 +45,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .title {
   font-size: 6em;
-  background-color: black;
-  padding: 0;
+  background-color: white;
+  border: solid 6px black;
+  padding: 0.4em;
   border-radius: 6px;
   text-align: center;
   margin: 1.8em -25px 0.2em !important;
 }
 
 p.lead {
-  font-size: 1.6em;
+  font-size: 1.3em;
   text-align: center;
   margin-top: 0;
   margin-bottom: 2em;
@@ -69,6 +70,10 @@ p.lead {
   padding: 2em;
   line-height: 1.7em;
   font-size: 16px;
+}
+
+footer > .content {
+  padding: 0 2em;
 }
 
 .content>h1, h2, h3 {
