@@ -43,6 +43,17 @@ h1, h2, h3, h4, h5, h6 {
   color: white !important;
 }
 
+.lead > .pure-button {
+  background-color: black;
+  color: white;
+  transition: all 0.18s ease-in;
+}
+
+.lead > .pure-button:hover {
+  background-color: silver;
+  color: white;
+}
+
 .title {
   font-size: 6em;
   background-color: white;
