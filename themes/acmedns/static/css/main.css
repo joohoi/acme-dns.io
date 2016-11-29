@@ -24,7 +24,7 @@ html {
 body {
   margin-bottom: 100px; /* bottom = footer height */
   background-color: #DAEAEF;
-  color: #565c5d;
+  color: #272f32;
 }
 
 footer {
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .joona-is-cool {
-  color: #b3c2bf;
+  color: #03a9f4;
 }
 
 p.lead {
@@ -115,8 +115,9 @@ p.lead {
   margin: 0 auto;
   line-height: 1.7em;
   font-size: 16px;
-  padding: 3.5em;
-  background-color: white;
+}
+section.featured {
+  border-top: solid 20px #03a9f4;
 }
 .featured .content {
   background-color: #272F32;
@@ -138,6 +139,10 @@ footer > .content {
   background-color: rgba(0,0,0,0.05);
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 // forms
 
 .l-box {
@@ -145,7 +150,7 @@ footer > .content {
 }
 
 .l-box-lrg {
-  padding: 0em 3.5em 3.5em 0em
+ padding: 2.5em 2.5em 2.5em 0;
 }
 
 .featured .l-box-lrg {
