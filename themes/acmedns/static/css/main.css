@@ -42,23 +42,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
 }
 .featured {
-    background: #607d8b;
+    background: #31373a;
+    background: -webkit-linear-gradient(45deg, #31373a , #4CA1AF); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #31373a , #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .featured h3 {
-  font-size: 2.2em;
-  padding: 0;
-  margin: 0;
-  color: white;
-  text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    padding-left: 0.4em;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.8em;
 }
 
 .featured p {
  color: white;
-    border-left: solid 3px white;
+    font-weight: 300;
     margin-left: 0.7em;
     padding-left: 1.7em;
-
 }
 
 .white {
@@ -81,17 +85,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title {
-  color: #3b3a36;
-  font-size: 6em;
-  background-color: transparent;
-  // border: solid 6px #35a4da;
-  padding: 0.4em;
-  font-family: 'overpass', sans-serif;
-  font-weight: 900 !important;
-  border-radius: 16px;
-  text-align: center;
-  line-height: 1em;
-  margin: 1.8em -25px 0.2em !important;
+    color: #3b3a36;
+    font-size: 6em;
+    background-color: transparent;
+    padding: 0.4em;
+    font-family: 'overpass', sans-serif;
+    font-weight: 900 !important;
+    border-radius: 16px;
+    text-align: center;
+    margin: 0.2em 0.2em 0em !important;
 }
 
 .joona-is-cool {
@@ -99,9 +101,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p.lead {
-  font-size: 1.3em;
-  text-align: left;
-  margin: 0 auto 2em;
+    font-size: 1.1em;
+    text-align: left;
+    margin: 0 auto 2em;
+    font-weight: 400;
+}
+
+.modes {
+  background-color: white;
 }
 
 .align-right {
@@ -153,7 +160,7 @@ footer > .content {
 }
 
 .featured .l-box-lrg {
- padding: 3.5em;
+ padding: 2em;
 }
 
 .pure-form label {
