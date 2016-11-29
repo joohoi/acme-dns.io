@@ -38,51 +38,43 @@
     </div>
   </div>
 </section>
-
+<section class="content-container" id="register">
   <div class="content">
+    <h1>Get started</h1>
+    <h2>Step 1</h2>
+    <p>First, you will need your user id, api key and unique subdomain to point that CNAME to. Click the button below to get them.</p>
 
-<!-- Title, then 1/2 grid -->
+    <div class="pure-g">
+      <div class="l-box-lrg pure-u-md-1-2 pure-u-sm-1-1">
+         <form class="pure-form pure-form-stacked" id="acmeForm">
+          <fieldset>
 
-<!-- End of 1/2 grid -->
-</div>
-</section>
-<section class="content-container">
-<div class="content">
-  <h1>Get started</h1>
-  <h2>Step 1</h2>
-  <p>First, you will need your user id, api key and unique subdomain to point that CNAME to. Click the button below to get them.</p>
-  <button id="getStarted">Register</button>
-  <div class="show_after_button_click">
-    <div class="left_side_of_half_grid">
-      <form class="pure-form pure-form-stacked" id="acmeForm">
-        <fieldset>
+            <label for="fullDomain">Full Domain</label>
+            <input id="fullDomain" type="text" placeholder="...">
 
-          <label for="fullDomain">Full Domain</label>
-          <input id="fullDomain" type="text" placeholder="...">
+            <label for="subDomain">Sub Domain</label>
+            <input id="subDomain" type="text" placeholder="...">
 
-          <label for="subDomain">Sub Domain</label>
-          <input id="subDomain" type="text" placeholder="...">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="...">
 
-          <label for="username">Username</label>
-          <input id="username" type="text" placeholder="...">
+            <label for="password">Password</label>
+            <input id="password" type="text" placeholder="...">
 
-          <label for="password">Password</label>
-          <input id="password" type="text" placeholder="...">
-
-        </fieldset>
-      </form>
-    </div>
-    <div class="right_side_of_half_grid">
-      <h4>Values explained</h4>
-      <ul>
-        <li><strong>Fulldomain</strong> - This is your ACME-DNS subdomain, that you should point your CNAME to.</li>
-        <li><strong>Subdomain</strong> - This is the identifying part of the ACME-DNS subdomain, use this in your TXT update POST request. (Step 3)</li>
-        <li><strong>Username</strong> - This is your username for the unique subdomain created. This goes in X-Api-User - HTTP header in the update POST request. (Step 3</li>
-        <li><strong>Password</strong> - This is your API key. This goes in X-Api-Key - HTTP header in the update POST request. (Step 3)</li>
-      </ul>
+          </fieldset>
+        </form>
+      </div>
+      <div class="l-box-lrg pure-u-md-1-2 pure-u-sm-1-1">
+        <h4>Values explained</h4>
+        <ul>
+          <li><strong>Fulldomain</strong> - This is your ACME-DNS subdomain, that you should point your CNAME to.</li>
+          <li><strong>Subdomain</strong> - This is the identifying part of the ACME-DNS subdomain, use this in your TXT update POST request. (Step 3)</li>
+          <li><strong>Username</strong> - This is your username for the unique subdomain created. This goes in X-Api-User - HTTP header in the update POST request. (Step 3</li>
+          <li><strong>Password</strong> - This is your API key. This goes in X-Api-Key - HTTP header in the update POST request. (Step 3)</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 
 <div class="content">
   <h2>Step 2</h2>
