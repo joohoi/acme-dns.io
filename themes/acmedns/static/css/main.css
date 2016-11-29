@@ -38,8 +38,8 @@ footer {
 h1, h2, h3, h4, h5, h6 {
   color: black;
   font-family: 'Oxygen', sans-serif;
-  text-transform: lowercase;
   font-weight: 900;
+  text-transform: uppercase;
 }
 .featured {
     background: #31373a;
@@ -93,7 +93,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900 !important;
     border-radius: 16px;
     text-align: center;
-    margin: 0.2em 0.2em 0em !important;
+    text-transform: lowercase;
+    margin: 0.5em 0.2em 0em !important;
 }
 
 .joona-is-cool {
