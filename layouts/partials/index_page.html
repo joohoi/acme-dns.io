@@ -41,9 +41,11 @@
 
 <section class="content-container" id="register">
   <div class="content">
-    <h1>How it works?</h1>
-      <p>ACME-DNS creates a limited DNS server that serves TXT records used to carry ACME challenge tokens when using the DNS challenge.</p>
-      <p>Get an API key and a unique subdomain from ACME-DNS service. Add a CNAME record to your zone for the magic subdomain of the domain you want to automate DNS challenge for (eg. _acme-challenge.yourdomain.tld) pointing to the unique ACME-DNS subdomain you have. After this you are able to use your ACME-DNS API keys for the challenge automation.</p>
+<h1>How it works</h1>
+
+<p>Acme-dns creates a simple DNS server that serves answers to TXT challenge queries used by certificate authorities implementing ACME protocol.</p>
+
+<p>First you need to get a unique subdomain and API keys from acme-dns service. Then you'll need to create a CNAME record to your existing DNS zone, pointing to the newly created unique subdomain. After this you are able to automate answering to ACME DNS challenges in a simple and secure way using your ACME client of choice.</p>
   </div>
   <div class="content step">
     <h2>Step 1</h2>
