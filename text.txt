@@ -1,0 +1,101 @@
+h2 Security:
+
+Acme-dns gives you a limited API key, that only allows updating of a single TXT record for your unique, generated subdomain. You can point a CNAME from your "magic" ACME subdomain (eg. "_acme-challenge.yourdomain.tld") to it to use your API credentials to update the challenge token.
+
+This way, if your box with the API key gets compromised, your DNS zone will stay safe. Everything that the attacker will be able to do is to create a new certificate for your domain - which would be possible anyway, taken to the account that the attacker has control over the box.
+
+
+h2 Accessibility:
+
+Most of DNS servers (software) do provide some kind of API to update the zone to be able to automate ACME DNS challenges as of now. However these methods have too many configuration caveats simply because they were never designed for this kind of automation.
+
+Acme-dns provides a simple, intentionally limited and intuitive API to automate updating ACME DNS challenge token for your subdomain. You can use acme-dns regardless of the DNS server software / service you are currently using, as long as it supports CNAME records!
+
+
+h1 Usage from the client perspective:
+
+--- video, huon UUSI: https://asciinema.org/a/94903
+
+h1  Host your own instance or use ours
+
+p You should note that you are effectively authorizing the acme-dns instance to act on behalf of your actual DNS server when it comes to answering ACME DNS challenges. This means that whoever owns the domain name for acme-dns instance, is able to request a certificate for the domain that is pointing to it via CNAME. 
+
+h2 Self-hosted
+
+You are encouraged to run acme-dns as a self-hosted service. Get the code from Github, and follow the installation and configuration instructions there to set up your own instance. Note that you will have to delegate a DNS subzone control for it. ( eg. auth.your-domain.tld ).
+
+
+h2 As a service
+
+If you just want to test it out, or prefer not to set up your own instance, good news: We're hosting it for free! Just follow the instructions below to get your own unique subdomain and the credentials needed to update your DNS challenge token using the API.
+
+
+
+h1 How it works
+
+p Acme-dns creates a simple DNS server that serves answers to TXT challenge queries used by certificate authorities implementing ACME protocol.
+
+p First you need to get a unique subdomain and API keys from acme-dns service. Then you'll need to create a CNAME record to your existing DNS zone, pointing to the newly created unique subdomain. After this you are able to automate answering to ACME DNS challenges in a simple and secure way using your ACME client of choice.
+
+
+
+Get started
+
+h2 Step 1
+
+p First, you'll need your user-key pair and unique subdomain to use in the automation process. Click the button below to generate those for you for the acme-dns.io - service.
+
+
+---formi
+- Fully qualified domain
+
+- Subdomain
+
+- Username
+
+- Api key
+
+---aside
+
+- Fully qualified domain
+ - FQDN is your acme-dns.io subdomain that you should point the CNAME record from your original zome to.
+
+- Subdomain
+ - This is the unique part of your acme-dns domain. You need this when updating your challenge token.
+ 
+- Username
+ - You need this when updating your challenge token. Used in HTTP headers of the update POST request.
+ 
+- Api key
+ - You need this when updating your challenge token. Used in HTTP headers of the update POST request.
+
+
+h2 Step 2
+
+p Next, you will need to create a CNAME record to your original DNS zone for the magic ACME subdomain (_acme-challenge). This CNAME needs to point to the unique fully qualified domain created for you in Step 1. Note that you can point multiple CNAME records (for multiple domains) to a sigle acme-dns subdomain.
+
+For example:
+    _acme-challenge.yourdomain.tld CNAME <fully qualified domain generated in step1>
+
+h2 Step 3
+
+p Put it to use! Automate answering the ACME DNS challenges using your ACME client of choice. Currently any client that allows scripting will work. Example of a POST request that will update the TXT record:
+
+pre code 
+
+    curl -X POST https://auth.acme-dns.io/update \
+    -H "X-Api-User: <your_username_from_step1>" \
+    -H "X-Api-Key: <your_password_from_step1>" \
+    --data '{"subdomain": "<your_subdomain_from_step1>", "txt": "________43_character_url_safe_token________"}'
+
+p You can check if the update is succesful by:
+pre code
+
+    dig _acme-challenge.yourdomain.tld TXT
+
+p Here's what the scripted update request will look like in an automated script lauched by an ACME client:
+
+    curl -X POST https://auth.acme-dns.io/update \
+    -H "X-Api-User: <your_username_from_step1>" \
+    -H "X-Api-Key: <your_password_from_step1>" \
+    --data '{"subdomain": "<your_subdomain_from_step1>", "txt": "'"$TOKEN_PROVIDED_BY_ACME_CLIENT"'"}'
