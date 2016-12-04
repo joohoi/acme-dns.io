@@ -45,6 +45,7 @@ h2 Step 1
 
 p First, you'll need your user-key pair and unique subdomain to use in the automation process. Click the button below to generate those for you for the acme-dns.io - service.
 
+[ Create credentials ]
 
 ---formi
 - Fully qualified domain
