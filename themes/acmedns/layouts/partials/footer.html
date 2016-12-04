@@ -1,28 +1,3 @@
 </div>
-<script>window.SmoothScrollOptions = {
-    // Scrolling Core
-    animationTime    : 400, // [ms]
-    stepSize         : 100, // [px]
-
-    // Acceleration
-    accelerationDelta : 50,  // 50
-    accelerationMax   : 3,   // 3
-
-    // Keyboard Settings
-    keyboardSupport   : true,  // option
-    arrowScroll       : 50,    // [px]
-
-    // Pulse (less tweakable)
-    // ratio of "tail" to "acceleration"
-    pulseAlgorithm   : true,
-    pulseScale       : 4,
-    pulseNormalize   : 1,
-
-    // Other
-    touchpadSupport   : false, // ignore touchpad by default
-    fixedBackground   : true,
-    excluded          : ''
-}</script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
-<script src="{{ .Site.BaseURL }}js/main.js"></script>
+<script src="{{ .Site.BaseURL }}js/scripts.min.js"></script>
 {{ template "_internal/google_analytics.html" . }}

@@ -3,22 +3,20 @@
     <div class="pure-g">
       <div class="l-box-lrg pure-u-md-1-2 pure-u-sm-1-1">
         <h3><i class="fa fa-shield" aria-hidden="true"></i> Security</h3>
-        <p class="align-right">Providing a limited API key, that only provides access to change a single TXT record; the magic name used by ACME DNS challenge: _acme-challenge.yourdomain.tld</p>
+        <p class="align-right">Acme-dns gives you a limited API key, that only allows updating of a single TXT record for your unique, generated subdomain. You can point a CNAME from your "magic" ACME subdomain (eg. "_acme-challenge.yourdomain.tld") to it to use your API credentials to update the challenge token.</p>
+
+        <p>This way, if your box with the API key gets compromised, your DNS zone will stay safe. Everything that the attacker will be able to do is to create a new certificate for your domain - which would be possible anyway, taken to the account that the attacker has control over the box.</p>
       </div>
       <div class="l-box-lrg pure-u-md-1-2 pure-u-sm-1-1">
         <h3><i class="fa fa-wheelchair-alt" aria-hidden="true"></i> Accessibility</h3>
-        <p>Enabling you to use ACME DNS challenge even if your current DNS server software or service doesn't provide and automatable API for updating it.</p>
+        <p>Most of DNS servers (software) do provide some kind of API to update the zone to be able to automate ACME DNS challenges as of now. However these methods have too many configuration caveats simply because they were never designed for this kind of automation.</p>
+        <p>
+        Acme-dns provides a simple, intentionally limited and intuitive API to automate updating ACME DNS challenge token for your subdomain. You can use acme-dns regardless of the DNS server software / service you are currently using, as long as it supports CNAME records!</p>
       </div>
     </div>
   </div>
 </section>
-<section class="modes">
-  <div class="content text-center">
-    <h1>have a look a dem puppies</h1>
-    <script type="text/javascript" src="https://asciinema.org/a/94462.js" id="asciicast-94462" async></script>
-  </div>
-</section>
-<section class="content-container" style="background-color: red">
+<section class="content-container">
   <div class="content">
     <h1>Choose your poison</h1>
     <div class="pure-g">
@@ -34,34 +32,31 @@
     </div>
   </div>
 </section>
-<section class="content-container">
+<section class="modes">
+  <div class="content text-center">
+    <h1>Usage from the client perspective</h1>
+    <script type="text/javascript" src="https://asciinema.org/a/94903.js" id="asciicast-94903" async></script>
+  </div>
+</section>
+
+<section class="content-container" id="register">
   <div class="content">
     <h1>How it works?</h1>
       <p>ACME-DNS creates a limited DNS server that serves TXT records used to carry ACME challenge tokens when using the DNS challenge.</p>
       <p>Get an API key and a unique subdomain from ACME-DNS service. Add a CNAME record to your zone for the magic subdomain of the domain you want to automate DNS challenge for (eg. _acme-challenge.yourdomain.tld) pointing to the unique ACME-DNS subdomain you have. After this you are able to use your ACME-DNS API keys for the challenge automation.</p>
+  </div>
+  <div class="content step">
     <h2>Step 1</h2>
     <p>First, you will need your user id, api key and unique subdomain to point that CNAME to. Click the button below to get them.</p>
-  </div>
-</section>
-
-<section class="content-container">
-  <div class="content">
-
-<!-- Title, then full width box under -->
-<!-- End full width box -->
-  </div>
-</section>
-<section class="content-container" id="register">
-  <div class="content">
     <div class="pure-g">
       <div class="l-box-lrg pure-u-md-1-2 pure-u-sm-1-1">
-         <form class="pure-form pure-form-stacked" id="acmeForm">
+         <form class="pure-form pure-form-stacked" id="registerForm">
           <fieldset>
 
-            <label for="fullDomain">Full Domain</label>
+            <label for="fulldomain">Full Domain</label>
             <input id="fullDomain" type="text" placeholder="...">
 
-            <label for="subDomain">Sub Domain</label>
+            <label for="subdomain">Sub Domain</label>
             <input id="subDomain" type="text" placeholder="...">
 
             <label for="username">Username</label>
@@ -85,7 +80,7 @@
     </div>
   </div>
 
-<div class="content">
+<div class="content step">
   <h2>Step 2</h2>
   <p>Next you will need to create a CNAME record in your DNS zone for the magic subdomain (_acme-challenge.) for your domain.</p>
   <p>If you are planning to use ACME-DNS to proxy DNS authentication for subdomains <i>sub1.some.domain.tld</i> and <i>domain.tld</i> you will need to add two CNAME records:</p>
@@ -95,7 +90,7 @@
   </ul>
 </div>
 
-<div class="content">
+<div class="content step">
   <h2>Step 3</h2>
   <p>Put it to use! When attempting to solve ACME challenge, you can push the token to ACME-DNS, and if the CNAME is correct, the CA will follow it and ask for the token from ACME-DNS subdomain.</p>
   <p>You can automate it for many ACME clients out there, some examples below.</p>
