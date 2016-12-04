@@ -75,7 +75,7 @@ h2 Step 2
 p Next, you will need to create a CNAME record to your original DNS zone for the magic ACME subdomain (_acme-challenge). This CNAME needs to point to the unique fully qualified domain created for you in Step 1. Note that you can point multiple CNAME records (for multiple domains) to a sigle acme-dns subdomain.
 
 For example:
-    _acme-challenge.yourdomain.tld CNAME <fully qualified domain generated in step1>
+    _acme-challenge.yourdomain.tld CNAME <fully_qualified_domain_from_step1>
 
 h2 Step 3
 
