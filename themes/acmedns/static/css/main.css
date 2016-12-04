@@ -45,12 +45,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Oxygen', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  margin: 0;
 }
 .featured {
     background: #31373a;
     background: -webkit-linear-gradient(45deg, #31373a , #4CA1AF); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(45deg, #31373a , #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+.content-container {
+  padding: 2em;
+}
+
+.featred .fa {
+  position: absolute;
+  font-size: 15em;
+  opacity: 0.05;
 }
 
 .featured h3 {
