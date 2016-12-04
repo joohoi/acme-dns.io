@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-container {
-  padding: 2em;
+  padding: 4em;
 }
 
 .featred .fa {
@@ -125,7 +125,15 @@ p.lead {
 }
 
 .modes {
-  background-color: white;
+  background-color: #002129;
+  padding: 2em;
+}
+
+.modes h1 {
+    font-size: 2.4em;
+    /* text-align: left; */
+    padding: 1em;
+    color: white;
 }
 
 .align-right {
