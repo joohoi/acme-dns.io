@@ -7,7 +7,7 @@ This way, if your box with the API key gets compromised, your DNS zone will stay
 
 h2 Accessibility:
 
-Most of DNS servers (software) do provide some kind of API to update the zone to be able to automate ACME DNS challenges as of now. However these methods have too many configuration caveats simply because they were never designed for this kind of automation.
+Most of DNS servers (software) do have some kind of remote update method in place, as of today. However these methods have too many configuration caveats simply because they were never designed for the kind of automation ACME DNS challenges require.
 
 Acme-dns provides a simple, intentionally limited and intuitive API to automate updating ACME DNS challenge token for your subdomain. You can use acme-dns regardless of the DNS server software / service you are currently using, as long as it supports CNAME records!
 
