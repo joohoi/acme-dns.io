@@ -86,18 +86,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lead > .pure-button {
-  background-color: transparent;
-  padding: 1em 3em;
-  color: black;
-  border: solid 1px black;
+  background-color: #00bcd4;
+  padding: 1em 2em;
+  color: white;
+  // border: solid 1px black;
   border-radius: 4px;
   text-transform: lowercase;
   transition: all 0.18s ease-in;
 }
 
 .lead > .pure-button:hover {
-  background-color: #b3c2bf;
-  color: white;
+  // background-color: #b3c2bf;
+  // color: white;
 }
 
 .title {
@@ -118,10 +118,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p.lead {
-    font-size: 1.1em;
-    text-align: left;
     margin: 0 auto 2em;
+    word-spacing: 0em;
     font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .modes {
