@@ -129,7 +129,12 @@ p.lead {
   padding: 2em;
 }
 
-.modes h1 {
+.usage {
+  background-color: #384255;
+  padding: 2em;
+}
+
+.usage h1 {
     font-size: 2.4em;
     /* text-align: left; */
     padding: 1em;

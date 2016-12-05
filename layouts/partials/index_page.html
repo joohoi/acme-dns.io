@@ -34,7 +34,7 @@
     </div>
   </div>
 </section>
-<section class="modes">
+<section class="usage">
   <div class="content text-center">
     <h1>Usage from the client perspective</h1>
     <script type="text/javascript" src="https://asciinema.org/a/94903.js" id="asciicast-94903" async></script>
@@ -58,16 +58,16 @@
           <fieldset>
 
             <label for="fulldomain">Full Domain</label>
-            <input id="fullDomain" type="text" placeholder="...">
+            <input class="fulldomain" type="text" placeholder="...">
 
             <label for="subdomain">Sub Domain</label>
-            <input id="subDomain" type="text" placeholder="...">
+            <input class="subdomain" type="text" placeholder="...">
 
             <label for="username">Username</label>
-            <input id="username" type="text" placeholder="...">
+            <input class="username" type="text" placeholder="...">
 
             <label for="password">Password</label>
-            <input id="password" type="text" placeholder="...">
+            <input class="password" type="text" placeholder="...">
 
           </fieldset>
         </form>
@@ -101,16 +101,16 @@
   <!-- Here will be tabbed examples later on -->
   <code><pre>
     curl -X POST https://auth.acme-dns.io/update \
-    -H "X-Api-User: <span class="replace_with_username_if_step1_button_clicked">&lt;your_username&gt;</span>" \
-    -H "X-Api-Key: <span class="replace_with_password_if_step1_button_clicked">&lt;your_password&gt;</span>" \
-    --data '{"subdomain": "<span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_subdomain&gt;</span>", "txt": "________43_character_url_safe_token________"}'
+    -H "X-Api-User: <span class="username">&lt;your_username&gt;</span>" \
+    -H "X-Api-Key: <span class="password">&lt;your_password&gt;</span>" \
+    --data '{"subdomain": "<span class="subdomain">&lt;your_subdomain&gt;</span>", "txt": "________43_character_url_safe_token________"}'
     </pre></code>
   <p>Here's what it would look like in an automated script launched by ACME client:</p>
   <code><pre>
     curl -X POST https://auth.acme-dns.io/update \
-    -H "X-Api-User: <span class="replace_with_username_if_step1_button_clicked">&lt;your_username&gt;</span>" \
-    -H "X-Api-Key: <span class="replace_with_password_if_step1_button_clicked">&lt;your_password&gt;</span>" \
-    --data '{"subdomain": "<span class="replace_with_subdomain_if_step1_button_clicked">&lt;your_subdomain&gt;</span>", "txt": "'"$TOKEN_PROVIDED_BY_ACME_CLIENT"'"}'
+    -H "X-Api-User: <span class="username">&lt;your_username&gt;</span>" \
+    -H "X-Api-Key: <span class="password">&lt;your_password&gt;</span>" \
+    --data '{"subdomain": "<span class="subdomain">&lt;your_subdomain&gt;</span>", "txt": "'"$TOKEN_PROVIDED_BY_ACME_CLIENT"'"}'
     </pre></code>
 </div>
 
