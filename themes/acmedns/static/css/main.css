@@ -240,7 +240,7 @@ p.lead {
   font-size: 16px;
 }
 section.featured {
-  border-top: solid 1em #00bcd4;
+  border-top: solid 0.8em #03a9f4;
 }
 .featured .content {
   color: white;
