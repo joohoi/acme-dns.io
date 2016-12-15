@@ -30,8 +30,8 @@ footer h4 {
 }
 pre {
   border-radius: 0;
-  padding: 30px 15px;
-  background: #ececec;
+  padding: 1em 0.5em;
+  background: #eaf6fa;
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
@@ -256,7 +256,7 @@ footer > h4 {
 }
 
 .step {
-  background-color: #eaf6fa;
+  background-color: #f4f9fa;
   margin-bottom: 2em;
   padding: 2em !important;
   max-width: 1150px;
