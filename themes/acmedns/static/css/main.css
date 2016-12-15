@@ -31,12 +31,12 @@ footer h4 {
 pre {
   border-radius: 0;
   padding: 30px 15px;
-  background: #f7f7f7;
+  background: #ececec;
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
   font-size: 14px;
-  color: #666666;
+  color: #4a4a4a;
   border-left: 3px solid #03a9f4;
 }
 
@@ -45,7 +45,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Oxygen', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  margin: 0;
 }
 .featured {
     background-color: #384255;
@@ -249,13 +248,42 @@ section.featured {
 
 footer > .content {
   padding: 0 2em;
-  background-color: transparent;
+  color: white;
+}
+
+footer > h4 {
+  color: white;
 }
 
 .step {
-  background-color: white;
+  background-color: #eaf6fa;
   margin-bottom: 2em;
   padding: 2em !important;
+  max-width: 1150px;
+}
+
+.step h2 {
+  position: relative;
+  margin-top: -1.34em;
+  font-weight: bold;
+  padding: 0.3em 0em 0.3em 2em;
+  margin-left: -2.2em;
+  margin-right: -1.34em;
+  color: #fff;
+  background-color: #03a9f4;
+  -moz-box-shadow: 0px 2px 4px #888;
+}
+
+.step h2:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  top: 100%;
+  border-width: 5px 10px;
+  border-style: solid;
+  border-color: #666 #666 transparent transparent;
 }
 
 .page-container {
@@ -277,7 +305,7 @@ footer > .content {
 }
 
 .shady {
-  background-color: rgba(0,0,0,0.05);
+  background-color: #384255;
 }
 
 .text-center {
